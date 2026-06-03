@@ -1,0 +1,112 @@
+{
+    "if clean": {
+        "prefix": "if",
+        "body": [
+            "if (${1})",
+            "{",
+            "\t${0}",
+            "}"
+        ],
+        "description": "if without /* code */"
+    },
+
+	"else clean": {
+        "prefix": "else",
+        "body": [
+            "else",
+            "{",
+            "\t${0}",
+            "}"
+        ],
+        "description": "else with brascets"
+    },
+
+    "while statement": {
+        "prefix": "while",
+        "body": [
+            "while (${1})",
+            "{",
+            "\t${0}",
+            "}"
+        ],
+        "description": "while statement"
+    },
+
+    "for statement": {
+        "prefix": "for",
+        "body": [
+            "for (${1}; ${2}; ${3})",
+            "{",
+            "\t${0}",
+            "}"
+        ],
+        "description": "for statement"
+    },
+
+	"return statement": {
+		"prefix": "return",
+		"body": [
+			"return (${1});"
+		],
+		"description": "return with parentheses"
+	},
+
+	"printf statement": {
+		"prefix": "printf",
+		"body": [
+			"printf(\"${1}\");"
+		],
+		"description": "printf with quotes"
+	},
+
+	"ft_printf statement": {
+		"prefix": "ftprintf",
+		"body": [
+			"ft_printf(\"${1}\");"
+		],
+		"description": "ft_printf with quotes"
+	},
+
+	"write statement": {
+		"prefix": "write",
+		"body": [
+			"write(1, ${1}, ${2});"
+		],
+		"description": "write with quotes"
+	},
+
+	"include statement": {
+        "prefix": "include",
+        "body": [
+            "#include <${1}>"
+        ],
+        "description": "include header"
+	},
+
+	"main function": {
+        "prefix": "main",
+        "body": [
+            "int\tmain(void)",
+            "{",
+            "\t${0}",
+            "}"
+        ],
+        "description": "42 style main"
+	},
+
+	"scanf statement": {
+		"prefix": "scanf",
+		"body": [
+			"scanf(\"${1}\");"
+		],
+		"description": "scanf with quotes"
+	},
+
+	"malloc statement": {
+		"prefix": "malloc",
+		"body": [
+			"malloc(sizeof(${1}));"
+		],
+		"description": "malloc with parentheses"
+	}
+}
