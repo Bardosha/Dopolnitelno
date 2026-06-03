@@ -14,7 +14,7 @@ void	ft_lstadd_front(t_stack **lst, t_stack *new);
 void	ft_lstadd_back(t_stack **lst, t_stack *new);
 t_stack	*ft_lstlast(t_stack *lst);
 void	print_stack(t_stack **a);
-
+*/
 void	push(t_stack **st1, t_stack **st2)
 {
 	t_stack *tmp;
@@ -53,7 +53,7 @@ void	op_ra(t_stack **a)
 {
 	rotate(a);
 }
-
+/*
 void	ft_lstadd_back(t_stack **lst, t_stack *new)
 {
 	t_stack	*last;
@@ -204,10 +204,28 @@ static int	chunk_size(t_stack *a)
 // O(n√n)
 void	medium_sort(t_stack **a, t_stack **b)
 {
-	size_t	c_size;
-
-	c_size = chunk_size(*a); // 2
+	int		i; 		// счетчик для чанков
+	size_t	c_size; // размер одного чанка
+	
 	index_of_num(*a);
+	c_size = chunk_size(*a);
+	i = 0;
+	
+	while (*a != NULL)
+	{
+		while (*a != NULL)
+		{
+			if ((*a)->index <= (i+1) * c_size - 1)
+			{
+				op_pb(a, b);
+			}
+			else
+			{
+				op_ra(a); // стек внутри стал следующим
+			}
+		}
+		i++;
+	}
 }
 
 void	print_stack(t_stack *a)
