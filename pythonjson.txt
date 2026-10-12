@@ -1,0 +1,9 @@
+{
+    "print": {
+        "prefix": "print",
+        "body": [
+            "print($0)"
+        ],
+        "description": "print()"
+    }
+}
